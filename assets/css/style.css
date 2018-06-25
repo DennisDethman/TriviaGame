@@ -1,0 +1,58 @@
+body {
+    
+    background-size: cover;
+/*    background-position: center;*/
+}
+
+
+.headerText {
+    font-family: tempo bold extended;
+    font-size: 70px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+p {
+    font-size: 35px;
+}
+#question{
+    font-size: 28px;
+    padding-top: 600px;
+    text-align: center;
+}
+#options{
+    align-content: center;
+    margin-left: 20px;
+}
+
+#results{
+    padding-left: 20px;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 55px;
+}
+
+#options{
+    align-items: center;
+    margin-left: 30px;
+    
+}
+.fcolor{
+ color: red;   
+/* font-size: 40px;    */
+}
+
+.end{
+    margin-top: 470px;
+}
+.playButton {
+    display: block;
+    width: 255px;
+    border-radius: 60px;
+    margin-left: 10px;
+    align-content: center;
+}
+
+div {
+/*    background-blend-mode: exclusion;*/
+}
