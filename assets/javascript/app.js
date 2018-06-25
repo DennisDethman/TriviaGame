@@ -4,6 +4,9 @@ $(document).ready(function(){
     $("#remaining-time").hide();
     $("#start").on('click', startGame);
     $(document).on('click' , '.playButton', guessChecker);
+    $(document).on('click' , '.playButton', function() {
+    $('.playButton').prop("disabled",true);
+    });
   
 });
 
@@ -119,13 +122,15 @@ function nextQuestion(){
      $.each(questionOptions, function(index, key){
      $('#options').append($('<button class="playButton btn btn-secondary btn-lg">'+key+'</button>'));
     })
-                                                                                                     console.log("question index = " + trivia.currentIndex);
+      
+                                                                                                 console.log("question index = " + trivia.currentIndex);
   };
     
 //************************************************************************************************
 //************************************************************************************************ 
   
 function timerRunning(){
+    
     
     if(trivia.timer > -1 && trivia.currentIndex < Object.keys(trivia.questions).length){
       $('#timer').text(trivia.timer);
@@ -144,7 +149,7 @@ function timerRunning(){
     else if(trivia.timer === -1){
       trivia.unanswered++;
       clearInterval(trivia.timerId);
-      setTimeout(guessResult, 1800);
+      setTimeout(guessResult, 2400);
       $('#results').html('<h3>Times up! The correct answer was '+ Object.values(trivia.answers)[trivia.currentIndex] +'</h3>');
     }
 //end game
@@ -180,7 +185,7 @@ function guessChecker() {
       
       trivia.correct++;
       clearInterval(trivia.timerId);
-      setTimeout(guessResult, 1800);
+      setTimeout(guessResult, 2400);
       $('#results').html('<h3>Great Job!</h3>');
     }
 //wrong counter
@@ -190,7 +195,7 @@ function guessChecker() {
       
       trivia.incorrect++;
       clearInterval(trivia.timerId);
-      setTimeout(guessResult, 1800);
+      setTimeout(guessResult, 2400);
       $('#results').html('<h3>Incorrect! '+ currentAnswer +' is the answer</h3>');
     }
     
