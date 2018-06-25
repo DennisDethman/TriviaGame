@@ -1,15 +1,26 @@
-body {
-    
-    background-size: cover;
-/*    background-position: center;*/
+html{
+    background-color: #8D938F;
 }
 
+
+body {
+    
+    background-size:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.container{
+    height: 900px;
+    max-width: 600px;
+}
 
 .headerText {
     font-family: tempo bold extended;
     font-size: 70px;
     text-align: center;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 }
 
 p {
@@ -17,7 +28,7 @@ p {
 }
 #question{
     font-size: 28px;
-    padding-top: 600px;
+    padding-top: 525px;
     text-align: center;
 }
 #options{
@@ -43,7 +54,7 @@ p {
 }
 
 .end{
-    margin-top: 470px;
+    margin-top: 400px;
 }
 .playButton {
     display: block;
